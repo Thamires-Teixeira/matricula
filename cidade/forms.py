@@ -1,12 +1,13 @@
 from django.forms import ModelForm
 from django import forms
-from .models import Curso
+from .models import Cidade
 
-class CursoForm(ModelForm):
+class CidadeForm(ModelForm):
 
     class Meta:
-        model = Curso
+        model = Cidade
         fields = '__all__'
         widgets = {
             'nome' : forms.TextInput(attrs={'class': 'form-control' }),
+            'sigla_estado' : forms.TextInput(attrs={'class': 'form-control' }),
         }
